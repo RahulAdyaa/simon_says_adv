@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.difficulty-selector {
+  margin-bottom: 2rem;
+}
+
+.difficulty-selector h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.difficulty-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #4a4a4a;
+  color: #fff;
+}
+
+.difficulty-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.difficulty-btn[data-difficulty="easy"] {
+  background: #4CAF50;
+}
+
+.difficulty-btn[data-difficulty="medium"] {
+  background: #FFA500;
+}
+
+.difficulty-btn[data-difficulty="hard"] {
+  background: #f44336;
+}
+
+#start {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2196F3;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+#start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.high-scores {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.high-scores h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.score-display {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.score-display p {
+  font-size: 1.1rem;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+}
+
+.simon {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #000;
+  border-radius: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.color-part {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-part:hover {
+  filter: brightness(1.2);
+}
+
+.color1 {
+  background: #068e06;
+  border-top-left-radius: 100%;
+}
+
+.color2 {
+  background: #950303;
+  border-top-right-radius: 100%;
+}
+
+.color3 {
+  background: #01018a;
+  border-bottom-left-radius: 100%;
+}
+
+.color4 {
+  background: #919102;
+  border-bottom-right-radius: 100%;
+}
+
+.game-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#count {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#difficulty-display {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+#result {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.color-part.active {
+  animation: pulse 0.3s ease;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.creator-name {
+  font-weight: 600;
+  color: #2196F3;
+  text-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+      font-size: 10px;
+  }
+  .wrapper {
+      height: 35em;
+      width: 35em;
+  }
+}
+

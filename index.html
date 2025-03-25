@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Simon Says Game</h1>
+        </div>
+        <div class="difficulty-selector">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            </div>
+        </div>
+        <div class="game-controls">
+            <p id="result" class="hide">Your Score: <span>0</span></p>
+            <button id="start" class="hide">Start Game</button>
+        </div>
+        <div class="high-scores">
+            <h3>High Scores</h3>
+            <div class="score-display">
+                <p>Easy: <span id="easy-high-score">0</span></p>
+                <p>Medium: <span id="medium-high-score">0</span></p>
+                <p>Hard: <span id="hard-high-score">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper hide"> 
+        <div class="simon">
+            <div class="color1 color-part"></div>
+            <div class="color2 color-part"></div>
+            <div class="color3 color-part"></div>
+            <div class="color4 color-part"></div>
+            <div class="game-info">
+                <div id="count">00</div>
+                <div id="difficulty-display">Easy</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Created by <span class="creator-name">Rahul Adya</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
